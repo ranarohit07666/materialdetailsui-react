@@ -22,7 +22,7 @@ import { useSelector } from "react-redux";
 
 export const ReferenceView = () => {
   const [reference, setReference] = useState();
-  const role = useSelector((state) => state.auth.user.role);
+  const role = useSelector((state) => state.auth?.user?.role);
   const fetchReferences = async () => {
     const response = await api.get("/reference");
     console.log(response);
